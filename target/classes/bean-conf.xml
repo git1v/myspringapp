@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd">
+	
+	<bean id="hellobeanimpl" class="com.tuyano.sample.HelloBeanNextInpl">
+		<property name="title"  value="HelloBeanNextImpl" />
+		<property name="message" value="this is message" />
+	</bean>
+
+	<bean id="externalbean" class="com.tuyano.sample.ExternalBean">
+		<property name="bean" >
+			<ref bean="hellobeanimpl" />
+		</property>
+	</bean>
+</beans>
